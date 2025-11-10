@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rubik's Cube Solver</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Rubik's Cube Solver</h1>
+  <div id="colorPicker"></div>
+  <div id="cube"></div>
+
+  <div style="margin-top: 25px;">
+    <button id="solveBtn">Solve Cube</button>
+    <button id="resetBtn">Reset</button>
+  </div>
+
+  <div id="message"></div>
+  <div id="result"></div>
+
+  <div id="solverControls">
+    <div>
+      <button id="prevMoveBtn">◀ Prev</button>
+      <button id="playPauseBtn">▶ Play</button>
+      <button id="nextMoveBtn">Next ▶</button>
+      Speed: <input id="speedRange" type="range" min="200" max="2000" step="100" value="800">
+      <span id="speedLabel">800ms</span>
+    </div>
+    <div id="currentMoveDisplay">Current: —</div>
+    <div id="movesContainer"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

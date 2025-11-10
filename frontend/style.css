@@ -1,0 +1,141 @@
+/* ----------- Rubik’s Cube Solver Minimal UI ----------- */
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #5cbdb9;  /* can use these shades too pinky: #fbe3e8, */
+  color: #222;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+#cube {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(2, auto);
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  
+}
+
+.face-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.face-wrapper div:first-child {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.face {
+  display: grid;
+  grid-template-columns: repeat(3, 48px);
+  grid-template-rows: repeat(3, 48px);
+  gap: 4px;
+}
+
+.sticker {
+  width: 48px;
+  height: 48px;
+  background-color: #e6e6e6;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.sticker:hover {
+  transform: scale(1.05);
+}
+
+/* ----------- Color Picker ----------- */
+#colorPicker {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 45px;
+}
+
+.color-option {
+  width: 42px;
+  height: 42px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 0 1px #ccc;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.color-option:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.15);
+}
+
+.color-name {
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* ----------- Buttons ----------- */
+.buttons {
+  margin-top: 25px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0078d7;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #005fa3;
+}
+
+#resetBtn {
+  background-color: #e74c3c;
+}
+
+#resetBtn:hover {
+  background-color: #c0392b;
+}
+
+/* ----------- Message & Result ----------- */
+#message {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #d9534f;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: 600;
+  white-space: pre-line;
+}
+
+/* ----------- Playback Section (optional clean style) ----------- */
+#solverControls {
+  margin-top: 40px;
+  text-align: center;
+}
+
+#movesContainer {
+  margin-top: 15px;
+  max-height: 220px;
+  overflow-y: auto;
+  display: inline-block;
+  text-align: left;
+}
